@@ -1,0 +1,54 @@
+.signup-container {
+  width: 400px;
+  height: 80vh;
+  border: 1px solid silver;
+  margin: 60px auto;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.signup-container h2 {
+  margin-top: 80px;
+  font-size: 35px;
+  text-transform: uppercase;
+  color: green;
+  font-weight: bolder;
+}
+
+span {
+  font-size: 20px;
+}
+
+.signup-container div {
+  margin-top: 30px;
+}
+
+input {
+  min-width: 70%;
+  padding: 7px 9px;
+  outline: none;
+  border: 1px solid silver;
+  border-radius: 5px;
+}
+
+button {
+  padding: 15px 30px;
+  text-transform: uppercase;
+  font-weight: 700;
+  border: none;
+  background-color: rgb(12, 180, 12);
+  color: white;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+#login {
+  background-color: transparent;
+  color: rgb(43, 43, 225);
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(63, 63, 228);
+}
