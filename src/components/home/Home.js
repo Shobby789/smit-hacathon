@@ -18,42 +18,39 @@ export default function Home() {
     getUser();
   }, [demo]);
 
-  const [authenticated, setauthenticated] = useState(null);
-  useEffect(() => {
-    const loggedInUser = localStorage.getItem("authenticated");
-    if (loggedInUser) {
-      setauthenticated(loggedInUser);
-    }
-  }, []);
-  if (!authenticated) {
-    return (
-      <>
-        <div className="homePage">
-          <div className="head"></div>
-          <img src={headImg} alt="" />
-          <div
-            style={{
-              border: "1px solid black",
-              display: "flex",
-              flexWrap: "wrap",
-            }}
-          >
-            {demo.map((demo) => {
-              return (
-                <div className="item">
-                  <img src={grocery} alt="" />
-                  <p>{demo.itemName}</p>
-                  <p>
-                    {demo.unitName} {demo.unitPrice}
-                  </p>
-                </div>
-              );
-            })}
-          </div>
+  // const [authenticated, setauthenticated] = useState(null);
+  // useEffect(() => {
+  //   const loggedInUser = localStorage.getItem("authenticated");
+  //   if (loggedInUser) {
+  //     setauthenticated(loggedInUser);
+  //   }
+  // }, []);
+  // if (!authenticated) {
+  return (
+    <>
+      <div className="homePage">
+        <div className="head"></div>
+        <img src={headImg} alt="" />
+        <div
+          style={{
+            border: "1px solid black",
+            display: "flex",
+            flexWrap: "wrap",
+          }}
+        >
+          {demo.map((demo) => {
+            return (
+              <div className="item">
+                <img src={grocery} alt="" />
+                <p>{demo.itemName}</p>
+                <p>
+                  {demo.unitName} {demo.unitPrice}
+                </p>
+              </div>
+            );
+          })}
         </div>
-      </>
-    );
-  } else {
-    navigate("/sign");
-  }
+      </div>
+    </>
+  );
 }
